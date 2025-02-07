@@ -1,8 +1,22 @@
-﻿@{
+﻿@model IEnumerable<moment2dotnet.Models.Treats>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 >Välkommen</h1>
+    <p>Här finns lite rolig information</p>
+
+    <div id="fika-container">
+        @foreach(var treat in Model) {
+            <article>
+                <h3>@treat.name</h3>
+                <b>@treat.score</b>
+                <p>@treat.comment</p>
+            </article>
+        }
+
+    </div>
+
 </div>

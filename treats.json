@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Dammsugare", 
+        "score": 5, 
+        "comment": "Väldigt gott fikabröd!"
+    }, 
+    {
+        "name": "Chokladboll pärlsocker", 
+        "score": 3, 
+        "comment": "God, men lite knastrigt och sött med pärlsockret"
+    }, 
+    {
+        "name": "DChokladboll kokos", 
+        "score": 4, 
+        "comment": "VKokosen gifter sig prefekt med chokladbollen"
+    }, 
+    {
+        "name": "Mazarin", 
+        "score": 3, 
+        "comment": "God, men inte den godaste"
+    }, 
+    {
+        "name": "Hallongrotta", 
+        "score": 2, 
+        "comment": "Torr kaka med seg sylt :("
+    }
+]

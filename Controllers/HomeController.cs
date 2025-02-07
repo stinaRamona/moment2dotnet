@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using moment2dotnet.Models;
+using Newtonsoft.Json;
 
 namespace moment2dotnet.Controllers;
 
@@ -15,7 +16,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var jsonStr = System.IO.File.ReadAllText("treats.json"); 
+        var jsonObj = JsonConvert.DeserializeObject<IEnumerable<Treats>>(jsonStr); 
+        return View(jsonObj);
     }
 
     public IActionResult Privacy()
