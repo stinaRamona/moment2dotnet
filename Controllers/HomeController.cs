@@ -23,11 +23,12 @@ public class HomeController : Controller
 
     public IActionResult Info()
     {
-        ViewData["Info"] = "Här kommer lite info från Controllern"; 
+        HttpContext.Session.SetString("Favorite", "Dammsugare");
+        ViewData["Info"] = "Här kommer lite text från Controllern"; 
         return View();
     } 
 
-    [Route("/om")]
+    [Route("/omfika")]
     public IActionResult About()
     {
         ViewBag.Vacuum= "Dammsugare - Ett traditionellt fikabröd med smak av arrak. Omlindade i marsipan och ändarna är doppade i choklad";

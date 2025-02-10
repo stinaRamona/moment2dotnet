@@ -1,6 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Info";
+
+    //HttpContext.Session.GetString("Favorite"); 
 }
-<h1>På denna sida finns lite info</h1>
+<h1>Info om sidan</h1>
+
+<article>
+    Denna sida är skapad med ASP.NET CORE MVC. Texten nedan är skickad med hjälp av ViewData från Controllern. 
+</article>
 
 <h2>@ViewData["Info"]</h2>
+
+<h2>Favorit fika inläst från storage:</h2>
+<b></b>
