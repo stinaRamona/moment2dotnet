@@ -30,7 +30,11 @@ public class HomeController : Controller
     [Route("/om")]
     public IActionResult About()
     {
-        ViewBag.Message= "Hej, här är ett meddelande från Controllern";
+        ViewBag.Vacuum= "Dammsugare - Ett traditionellt fikabröd med smak av arrak. Omlindade i marsipan och ändarna är doppade i choklad";
+        ViewBag.Pearl="Chockladboll pärlsocker - En klassisk chokladboll baserad på smör, salt, havregryn, kaffe, socker och kakao. Rullade i pärlsocker";
+        ViewBag.Coco="Chokladboll kokos - En likadan chokladboll som med pärlsocker, men istället rullad i kokos";
+        ViewBag.Mazarin="Mazarin - Klassiskt fikabröd med mandelsmet, toppade med galsyr";
+        ViewBag.Rasberry="Hallongrotta - En mördegskaka bakad på klassiskt vis med en klick hallonsylt i mitten";   
         return View();
     }
 
