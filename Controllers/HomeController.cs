@@ -21,14 +21,16 @@ public class HomeController : Controller
         return View(jsonObj);
     }
 
-    public IActionResult Privacy()
+    public IActionResult Info()
     {
+        ViewData["Info"] = "Här kommer lite info från Controllern"; 
         return View();
     } 
 
     [Route("/om")]
     public IActionResult About()
     {
+        ViewBag.Message= "Hej, här är ett meddelande från Controllern";
         return View();
     }
 
