@@ -1,7 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http
+@{
     ViewData["Title"] = "Info";
 
-    //HttpContext.Session.GetString("Favorite"); 
 }
 <h1>Info om sidan</h1>
 
@@ -11,5 +11,5 @@
 
 <h2>@ViewData["Info"]</h2>
 
-<h2>Favorit fika inläst från storage:</h2>
-<b></b>
+<h2>Favorit fika inläst sessionstorage:</h2>
+<b>@ViewBag.Fave</b>

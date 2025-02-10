@@ -16,6 +16,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        HttpContext.Session.SetString("Favorite", "Dammsugare");
+
         var jsonStr = System.IO.File.ReadAllText("treats.json"); 
         var jsonObj = JsonConvert.DeserializeObject<IEnumerable<Treats>>(jsonStr); 
         return View(jsonObj);
@@ -23,7 +25,7 @@ public class HomeController : Controller
 
     public IActionResult Info()
     {
-        HttpContext.Session.SetString("Favorite", "Dammsugare");
+        ViewBag.Fave = HttpContext.Session.GetString("Favorite");
         ViewData["Info"] = "Här kommer lite text från Controllern"; 
         return View();
     } 
